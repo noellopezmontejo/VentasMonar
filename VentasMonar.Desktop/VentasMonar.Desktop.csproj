@@ -1,0 +1,299 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VentasMonar.Common\VentasMonar.Common.csproj" />
+    <ProjectReference Include="..\VentasMonar.Data\VentasMonar.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Aspose.BarCode">
+      <HintPath>..\..\dllMonar\dll\Aspose.BarCode.dll</HintPath>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects">
+      <HintPath>..\..\dllMonar\dll\AxShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="BarCodeGenerator">
+      <HintPath>..\..\dllMonar\dll\BarCodeGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib">
+      <HintPath>..\..\dllMonar\dll\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\dllMonar\dll\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.2">
+      <HintPath>..\..\dllMonar\dll\C1.Win.C1FlexGrid.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.2">
+      <HintPath>..\..\dllMonar\dll\C1.Win.C1TrueDBGrid.2.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>..\..\dllMonar\dll\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DGMC.TimbraCFDI">
+      <HintPath>..\..\dllMonar\dll\DGMC.TimbraCFDI.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71">
+      <HintPath>..\..\dllMonar\dll\FlashControlV71.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\dllMonar\dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\dllMonar\dll\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <HintPath>..\..\dllMonar\dll\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MSXML">
+      <HintPath>..\..\dllMonar\dll\Microsoft.MSXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop">
+      <HintPath>..\..\dllMonar\dll\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop">
+      <HintPath>..\..\dllMonar\dll\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
+      <HintPath>..\..\dllMonar\dll\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop">
+      <HintPath>..\..\dllMonar\dll\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0">
+      <HintPath>..\..\dllMonar\dll\Microsoft.VisualStudio.TextManager.Interop.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\dllMonar\dll\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Profact.TimbraCFDI">
+      <HintPath>..\..\dllMonar\dll\Profact.TimbraCFDI.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickStart">
+      <HintPath>..\..\dllMonar\dll\QuickStart.dll</HintPath>
+    </Reference>
+    <Reference Include="RadControlSpy">
+      <HintPath>..\..\dllMonar\dll\RadControlSpy.dll</HintPath>
+    </Reference>
+    <Reference Include="RKLib.ExportData">
+      <HintPath>..\..\dllMonar\dll\RKLib.ExportData.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects">
+      <HintPath>..\..\dllMonar\dll\ShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole">
+      <HintPath>..\..\dllMonar\dll\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Base">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Chart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Windows">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Chart.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core.WinForms">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Core.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Gauge.Windows">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Gauge.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.SpellChecker.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows">
+      <HintPath>..\..\dllMonar\dll\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe">
+      <HintPath>..\..\dllMonar\dll\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.ChartView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PdfViewer">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.PdfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PivotGrid">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.PivotGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadChart">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.RadChart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDiagram">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.RadDiagram.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.RadDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadMarkupEditor">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.RadMarkupEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextBox">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.RichTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.RichTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Aqua">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Aqua.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Breeze">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Desert">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Desert.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Black">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Office2007Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Office2007Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Black">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Office2010Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Silver">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Office2010Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Office2013Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Office2013Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.TelerikMetro.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.TelerikMetroTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.VisualStudio2012Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.VisualStudio2012Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows7">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Windows7.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows8">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.Themes.Windows8.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI.Design">
+      <HintPath>..\..\dllMonar\dll\Telerik.WinControls.UI.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon">
+      <HintPath>..\..\dllMonar\dll\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikData">
+      <HintPath>..\..\dllMonar\dll\TelerikData.dll</HintPath>
+    </Reference>
+    <Reference Include="textBoxCustomControl">
+      <HintPath>..\..\dllMonar\dll\textBoxCustomControl.dll</HintPath>
+    </Reference>
+    <Reference Include="TextoLetras">
+      <HintPath>..\..\dllMonar\dll\TextoLetras.dll</HintPath>
+    </Reference>
+    <Reference Include="USLib">
+      <HintPath>..\..\dllMonar\dll\USLib.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualStyleBuilder.Design">
+      <HintPath>..\..\dllMonar\dll\VisualStyleBuilder.Design.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
