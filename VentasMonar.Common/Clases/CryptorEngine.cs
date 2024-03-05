@@ -4,7 +4,7 @@ using System.Text;
 using System.Security.Cryptography;
 using System.Configuration;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     public class CryptorEngine
     {

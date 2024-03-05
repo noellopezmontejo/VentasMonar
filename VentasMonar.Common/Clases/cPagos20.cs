@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using static iTextSharp.text.pdf.events.IndexEvents;
 using VentasMonar.Desktop.Clases;
 using Profact.TimbraCFDI40;
-using static VentasMonar.Desktop.PageBase;
+using static VentasMonar.Common.PageBase;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     public class cPagos20
     {

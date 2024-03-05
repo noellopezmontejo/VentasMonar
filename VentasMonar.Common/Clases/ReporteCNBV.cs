@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     /// <summary>
     /// Datos de Reporte de Operaciones PLD.

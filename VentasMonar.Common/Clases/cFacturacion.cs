@@ -7,7 +7,6 @@ using VentasMonar.Desktop.Clases;
 using System.Data.SqlClient;
 using System.Data;
 using System.Drawing;
-using System.Windows.Forms;
 using System.Configuration;
 using Profact.TimbraCFDI33;
 using VentasMonar.Desktop.Facturacion;
@@ -15,7 +14,7 @@ using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
 using System.IO;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     class cFacturacion
     {

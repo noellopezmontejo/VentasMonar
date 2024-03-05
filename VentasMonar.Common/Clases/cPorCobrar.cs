@@ -6,11 +6,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using static VentasMonar.Desktop.PageBase;
-using System.Windows.Forms;
+using static VentasMonar.Common.PageBase;
 //using Syncfusion.DocIO.DLS;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     public class cPorCobrar
     {

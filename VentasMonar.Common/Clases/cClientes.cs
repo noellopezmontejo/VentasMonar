@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
    
     class cClientes
     {
 
-        Clases.cPageBase pb = new cPageBase();
+         cPageBase pb = new cPageBase();
 
         private int intCveCliente;
         private int intCveReceptor;

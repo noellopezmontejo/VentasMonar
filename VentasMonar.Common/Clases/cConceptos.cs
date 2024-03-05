@@ -5,11 +5,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     class cConceptos
     {
-        public static Clases.cPageBase pb = new cPageBase();
+        public static cPageBase pb = new cPageBase();
 
         public class v_Parametros
         {

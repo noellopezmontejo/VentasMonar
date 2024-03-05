@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using VentasMonar.Desktop.Clases;
+using VentasMonar.Common.Clases;
 using System.Data.SqlClient;
 using System.Data;
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     class c_Producto
     {

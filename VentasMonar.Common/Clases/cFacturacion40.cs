@@ -6,21 +6,20 @@ using System.Text;
 using System.Data;
 using Profact.TimbraCFDI33;
 using System.Data.SqlClient;
-using VentasMonar.Desktop.Helpers;
+using VentasMonar.Common.Helpers;
 using System.Configuration;
-using static VentasMonar.Desktop.PageBase;
+using static VentasMonar.Common.PageBase;
 using System.IO;
 using System.Xml;
 using CrystalDecisions.Shared;
 using System.Diagnostics;
-using System.Windows.Forms;
-using VentasMonar.Desktop.Models;
+using VentasMonar.Common.Models;
 using Microsoft.Win32;
 using System.Security.Cryptography;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     class cFacturacion40
     {

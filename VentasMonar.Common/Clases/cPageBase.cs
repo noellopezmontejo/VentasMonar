@@ -21,7 +21,7 @@ using System.Configuration;
 using System.Net.Sockets;
 using System.Web;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     public class cPageBase
     {
@@ -5478,7 +5478,7 @@ namespace VentasMonar.Desktop.Clases
         }
 
 
-        public DataTable LlenarTablaSinParametro(int option)
+        public DataTable LlenarTablaSinParametro(int option, out ArrayList _ListMensaje)
         {
             DataTable Tabla =new DataTable();
 
@@ -5490,6 +5490,13 @@ namespace VentasMonar.Desktop.Clases
             }
             else
             {
+                cMensaje mensaje = new cMensaje
+                {
+                    description = "Error Cliente",
+                     name="Error Cliente",
+                     resultado=C.
+                    
+                };
                 MessageBox.Show(C.ErrCliente);
             }
             return Tabla;

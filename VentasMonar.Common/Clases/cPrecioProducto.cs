@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
-using VentasMonar.Desktop.Punto_de_Venta;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     class cPrecioProducto
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
-    class Promotores:PageBase
+    class Promotores: cPageBase
     {
 
         private int cveCliente;

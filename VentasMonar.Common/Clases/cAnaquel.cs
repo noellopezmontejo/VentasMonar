@@ -4,9 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VentasMonar.Desktop.Clases;
+using VentasMonar.Common.Clases;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     class cAnaquel
     {

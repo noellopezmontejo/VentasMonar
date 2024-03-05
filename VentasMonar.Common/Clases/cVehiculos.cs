@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace VentasMonar.Desktop.Clases
+namespace VentasMonar.Common.Clases
 {
     class cVehiculos 
     {
