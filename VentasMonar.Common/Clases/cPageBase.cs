@@ -5482,7 +5482,7 @@ namespace VentasMonar.Common.Clases
         {
             DataTable Tabla =new DataTable();
 
-            Clases.Clientes C = new Clases.Clientes();
+            Clientes C = new Clientes();
 
             if (C.LeerAlmacen())
             {
@@ -5494,7 +5494,7 @@ namespace VentasMonar.Common.Clases
                 {
                     description = "Error Cliente",
                      name="Error Cliente",
-                     resultado=C.
+                     resultado=
                     
                 };
                 MessageBox.Show(C.ErrCliente);

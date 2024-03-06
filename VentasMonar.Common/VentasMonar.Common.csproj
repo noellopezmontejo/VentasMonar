@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <Reference Include="BarcodeLib">
-      <HintPath>..\..\dllMonar\dll\BarcodeLib.dll</HintPath>
+      <HintPath>..\..\..\2023\Monardll\dll\BarcodeLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 

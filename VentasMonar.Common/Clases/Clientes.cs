@@ -5,14 +5,11 @@ using System.Text;
 
 namespace VentasMonar.Common.Clases
 {
-    class Clientes : PageBase
+    public class Clientes
     {
 
         private int cveCliente;
-        Clases.ParametroCliente []paramCli;
-
-      
-
+        ParametroCliente []paramCli;
         public int CveCliente
         {
             get { return cveCliente; }
@@ -48,6 +45,8 @@ namespace VentasMonar.Common.Clases
             get { return strAlmacen; }
             set { strAlmacen = value; }
         }
+
+        cPageBase cPage=new cPageBase();
 
         public Clientes(int _cvecliente)
         {
@@ -107,33 +106,33 @@ namespace VentasMonar.Common.Clases
         {
 
 
-            return LeerTablaClienteA("BusquedaClienteA");
+            return cPage.LeerTablaClienteA("BusquedaClienteA");
 
         }
         public bool LeerAval()
         {
-            return LeerTablaClienteA("BusquedaAvalA");
+            return cPage.LeerTablaClienteA("BusquedaAvalA");
         }
         public bool LeerAvalB()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_busqueda", Busqueda);
 
-            return LeerTablaClientePametro("BusquedaAvalB", paramCli);
+            return cPage.LeerTablaClientePametro("BusquedaAvalB", paramCli);
         }
         public bool LeerClienteB()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_busqueda", Busqueda);
 
-            return LeerTablaClientePametro("BusquedaClienteB", paramCli);
+            return cPage.LeerTablaClientePametro("BusquedaClienteB", paramCli);
         }
 
         public bool LeerAlmacen()
         {
 
 
-            return LeerTablaClienteA("BusquedaAlmacen");
+            return cPage.LeerTablaClienteA("BusquedaAlmacen");
 
         }
 
@@ -143,49 +142,49 @@ namespace VentasMonar.Common.Clases
             paramCli[0] = new ParametroCliente("_busqueda", Busqueda);
             paramCli[1] = new ParametroCliente("_option", Option.ToString());
             paramCli[2] = new ParametroCliente("_CveAlmacen", Almacen);
-            return LeerTablaClientePametro("BusquedaProductoA", paramCli);
+            return cPage.LeerTablaClientePametro("BusquedaProductoA", paramCli);
         }
         public bool LeerClienteC()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_CveCredito", Busqueda);
 
-            return LeerTablaClientePametro("BusquedaClienteC", paramCli);
+            return cPage.LeerTablaClientePametro("BusquedaClienteC", paramCli);
         }
         public bool LeerAvalC()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_busqueda", Busqueda);
 
-            return LeerTablaClientePametro("BusquedaClienteC", paramCli);
+            return cPage.LeerTablaClientePametro("BusquedaClienteC", paramCli);
         }
         public bool LeerAvalD()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_busqueda", Busqueda);
 
-            return LeerTablaClientePametro("BusquedaClienteC", paramCli);
+            return cPage.LeerTablaClientePametro("BusquedaClienteC", paramCli);
         }
         public bool ClientesCreditos()
         {
             paramCli = new ParametroCliente[2];
             paramCli[0] = new ParametroCliente("_CveSocia", CveCveSocia.ToString());
             paramCli[1] = new ParametroCliente("_CveUser", CveUser.ToString());
-            return LeerTablaClientePametro("CreditosClientes2", paramCli);
+            return cPage.LeerTablaClientePametro("CreditosClientes2", paramCli);
         }
         public bool LeerAbonosCreditos()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_CveCredito", Busqueda);
 
-            return LeerTablaClientePametro("ClienteAbonosCreditos", paramCli);
+            return cPage.LeerTablaClientePametro("ClienteAbonosCreditos", paramCli);
         }
         public bool LeerPagosCreditos()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_CveCredito", Busqueda);
 
-            return LeerTablaClientePametro("ProcPagosCredito", paramCli);
+            return cPage.LeerTablaClientePametro("ProcPagosCredito", paramCli);
         }
         public bool LeerPagosVencidos()
         {
@@ -193,21 +192,21 @@ namespace VentasMonar.Common.Clases
             paramCli[0] = new ParametroCliente("_CveCredito", CveCredito.ToString());
             paramCli[1] = new ParametroCliente("_PInteres",PInteres.ToString());
 
-            return LeerTablaClientePametro("Proc_Vencidos", paramCli);
+            return cPage.LeerTablaClientePametro("Proc_Vencidos", paramCli);
         }
         public bool LeerAbonosCreditosGarantia()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_CveCredito", Busqueda);
 
-            return LeerTablaClientePametro("procAbonosGarantia", paramCli);
+            return cPage.LeerTablaClientePametro("procAbonosGarantia", paramCli);
         }
         public bool LeerPagosConMorosidad()
         {
             paramCli = new ParametroCliente[1];
             paramCli[0] = new ParametroCliente("_CveCredito", Busqueda);
 
-            return LeerTablaClientePametro("ProcPagosConMorosidad", paramCli);
+            return cPage.LeerTablaClientePametro("ProcPagosConMorosidad", paramCli);
         }
     }
 }
