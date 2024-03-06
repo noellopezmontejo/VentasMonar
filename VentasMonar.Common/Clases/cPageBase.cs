@@ -8,7 +8,6 @@ using System.Net.Mail;
 using Telerik.WinControls.UI;
 using Telerik.WinControls;
 using System.Drawing;
-using System.Windows.Forms;
 using System.IO;
 using RKLib.ExportData;
 using Profact.TimbraCFDI;
@@ -28,98 +27,39 @@ namespace VentasMonar.Common.Clases
         private bool disposed = false;
         private string instanceName;
 
-        
-        
 
-        public class NivelAcceso
+        public static string Strconexion;// ConfigurationManager.ConnectionStrings["SqlMonar"].ConnectionString;
+        public static string StrconexionLocalGlobal;// = ConfigurationManager.ConnectionStrings["SqlMonar"].ConnectionString;
+        public static string StrconexionGlobalMonar;// = ConfigurationManager.ConnectionStrings["SqlMonar_Anterior"].ConnectionString;
+
+        public cPageBase(string _Strconexion, string _StrconexionLocalGlobal, string _StrconexionGlobalMonar)
         {
-            private NivelAcceso() { }
-            public static int nivelacceso = 0;
+            Strconexion = _Strconexion;
+            StrconexionGlobalMonar= _StrconexionLocalGlobal;
+            StrconexionLocalGlobal = _StrconexionLocalGlobal;
         }
-        public class MesCargado
-        {
-            private MesCargado() { }
-            public static int mescargado = 0;
-        }
-        public class AnioCargado
-        {
-            private AnioCargado() { }
-            public static int aniocargado = 0;
-        }
-        public class UserName
-        {
-            private UserName() { }
-            public static string user_name = "rcalderon";
-        }
+
+
+        public int NivelAcceso { get; set; }
+        public int MesCargado { get; set; }
+        public int AnioCargado { get; set; }
+        public string UserName { get; set; }
+        public int CveUser { get; set; }
         
-        public class CveUser
-        {
-            private CveUser()
-            {
-            }
-            public static int Cve_User = 0 ;
-        }
         public bool ListHadBeenAdded = false;
 
         // Nuevo Procedimiento para conexion de usuarios
 
 
         public static Encriptar Enn = new Encriptar();
-        public class IdUserName
-        {
-            private IdUserName() { }
-            public static cIniArray mINI = new cIniArray();
-            public static string Archivo = Application.StartupPath + @"\Conexion.ini";
-            public static string UserName = Enn.DesEncriptarCadena(mINI.IniGet(Archivo, "Configuracion", "Usuario", ""));
-            public static string IdUser_Name = UserName;
+        public string IdUserName { get; set; }
+        public string IdPassWord { get; set; }
 
-        }
-        public class IdPassWord
-        {
-            private IdPassWord() { }
-            public static cIniArray mINI = new cIniArray();
-
-            public static string Archivo = Application.StartupPath + @"\Conexion.ini";
-            public static string Password = Enn.DesEncriptarCadena(mINI.IniGet(Archivo, "Configuracion", "Password", ""));
-            public static string Id_PassWord = Password;
-            //public static string Id_PassWord = "dsi"; 
-        }
-        public class ServerName
-        {
-            private ServerName() { }
-            public static cIniArray mINI = new cIniArray();
-            public static string Archivo = Application.StartupPath + @"\Conexion.ini";
-            public static string ServerName1 = Enn.DesEncriptarCadena(mINI.IniGet(Archivo, "Configuracion", "ServerName", ""));
-            public static string Id_ServerName = ServerName1;
-            //public static string Id_PassWord = "dsi"; 
-        }
-        public class BaseDatos
-        {
-            private BaseDatos() { }
-            public static cIniArray mINI = new cIniArray();
-            public static string Archivo = Application.StartupPath + @"\Conexion.ini";
-            public static string BaseDatos1 = Enn.DesEncriptarCadena(mINI.IniGet(Archivo, "Configuracion", "BaseDatos", ""));
-            public static string Id_BaseDatos = BaseDatos1;
-            //public static string Id_PassWord = "dsi"; 
-        }
-        public class PasswordPV
-        {
-            private PasswordPV() { }
-            public static cIniArray mINI = new cIniArray();
-            public static string Archivo = Application.StartupPath + @"\Conexion.ini";
-            public static string PasswordPV1 = Enn.DesEncriptarCadena(mINI.IniGet(Archivo, "Configuracion", "PasswordPV", ""));
-            public static string Id_PasswordPV1 = PasswordPV1;
-            //public static string Id_PassWord = "dsi"; 
-        }
-        public class CredencialPV
-        {
-            private CredencialPV() { }
-            public static cIniArray mINI = new cIniArray();
-            public static string Archivo = Application.StartupPath + @"\Conexion.ini";
-            public static string CredencialPV1 = Enn.DesEncriptarCadena(mINI.IniGet(Archivo, "Configuracion", "Credencial", ""));
-            public static string Id_CredencialPV1 = CredencialPV1;
-            //public static string Id_PassWord = "dsi"; 
-        }
+        public string ServerName { get; set; }
+        public string BaseDatos { get; set; }
+        public string PasswordPV { get; set; }
+        public string CredencialPV { get; set; }
+       
         //public string strconexion = "Database=" + BaseDatos.Id_BaseDatos + "; Data Source=" + ServerName.Id_ServerName + ";User Id=" + IdUserName.IdUser_Name + ";Password=" + IdPassWord.Password;
         //public String strconexion = "Database=Devoluciones; Data Source=conta4;User Id=" + IdUserName.IdUser_Name + ";Password=" + IdPassWord.Id_PassWord;
         //public String strconexion = "Database=DevolucionesResp; Data Source=localhost;User Id=root;Password=fianzas";
@@ -128,10 +68,6 @@ namespace VentasMonar.Common.Clases
         //public string strconexionLocalGlobal ="Database=" + BaseDatos.Id_BaseDatos + "; Data Source=" + ServerName.Id_ServerName + ";User Id=" + IdUserName.IdUser_Name + ";Password=" + IdPassWord.Password;//Sistema_de_Inventarios.Properties.Settings.Default.Db_LocalNetMonarConnectionString;
         //public string strconexionGlobalMonar = "Database=sae4; Data Source=" + ServerName.Id_ServerName + ";User Id=" + IdUserName.IdUser_Name + ";Password=" + IdPassWord.Password;//Sistema_de_Inventarios.Properties.Settings.Default.Db_LocalNetMonarConnectionString;
 
-
-        public static string Strconexion = ConfigurationManager.ConnectionStrings["SqlMonar"].ConnectionString;
-        public static string StrconexionLocalGlobal = ConfigurationManager.ConnectionStrings["SqlMonar"].ConnectionString;
-        public static string StrconexionGlobalMonar = ConfigurationManager.ConnectionStrings["SqlMonar_Anterior"].ConnectionString;
 
 
         //
@@ -5494,7 +5430,7 @@ namespace VentasMonar.Common.Clases
                 {
                     description = "Error Cliente",
                      name="Error Cliente",
-                     resultado=
+                     resultado=C.Erro
                     
                 };
                 MessageBox.Show(C.ErrCliente);

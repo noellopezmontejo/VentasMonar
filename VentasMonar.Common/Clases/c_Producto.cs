@@ -8,9 +8,11 @@ using System.Data.SqlClient;
 using System.Data;
 namespace VentasMonar.Common.Clases
 {
-    class c_Producto
+    public class c_Producto
     {
         Clases.cPageBase pb = new cPageBase();
+
+      
 
         public class ProductoComplete
         {
